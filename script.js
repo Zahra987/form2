@@ -11,11 +11,21 @@ signin.onclick=function(){
   if (signin.innerHTML==='sign in') {
     signin.innerHTML='sign up';
     title.innerHTML='sign in';
+    //change content of submit by onclick on signin-signup link
     btn.innerHTML='sign in';
+    //hidden age and email and confirm field
+    age.style.maxHeight='0';
+    email.style.maxHeight='0';
+    confirm.style.maxHeight='0';
   }else{
     signin.innerHTML='sign in';
     title.innerHTML='sign up';
+    //change content of submit by onclick on signin-signup link
     btn.innerHTML='sign up';
+    //visible age and email and confirm field
+    age.style.maxHeight='60px';
+    email.style.maxHeight='60px';
+    confirm.style.maxHeight='60px';
   }
   
 }

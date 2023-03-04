@@ -42,5 +42,14 @@ signin.onclick=function(){
 }
 //validation function
 btn.onclick=function(){
-  
+  //validation for username
+  if (username.children[1].value.length < 3) {
+    username.lastElementChild.style.visibility='visible';
+    return false;
+  }else{
+    username.lastElementChild.style.visibility='hidden';
+  }
+
+
+  return true;
 }

@@ -10,10 +10,10 @@ var confirm= document.getElementById('confirm');
 signin.onclick=function(){
   if (signin.innerHTML==='sign in') {
     signin.innerHTML='sign up';
-
+    title.innerHTML='sign in';
   }else{
     signin.innerHTML='sign in';
-    
+    title.innerHTML='sign up';
   }
   
 }

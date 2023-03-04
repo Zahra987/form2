@@ -49,7 +49,18 @@ btn.onclick=function(){
   }else{
     username.lastElementChild.style.visibility='hidden';
   }
-
-
+  //validation for age
+  var dateString = age.children[1].value;
+  var parts = dateString.split("-");
+  var now = new Date();
+  var birthday = new Date(now.getFullYear(),parts[1]-1,parts[2]);
+  var ageResult = now.getFullYear()-parts[0];
+  if (ageResult < 18) {
+    age.lastElementChild.style.visibility='visible';
+    return false;
+  }else{
+    age.lastElementChild.style.visibility='hidden';
+  }
+  
   return true;
 }

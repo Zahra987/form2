@@ -44,6 +44,8 @@ signin.onclick=function(){
 btn.onclick=function(){
   //...............................submit is sign up.................................
   if (btn.innerHTML==='sign up') {
+    // change position of password error box
+    password.lastElementChild.style.top='230px';
     //validation for username
   if (username.children[1].value.length < 3) {
     username.lastElementChild.style.visibility='visible';
@@ -89,6 +91,8 @@ btn.onclick=function(){
   return true;
   //.........................submit is sign in..............................
   }else{
+    // change position of password error box
+    password.lastElementChild.style.top='120px';
     //validation for username
     if (username.children[1].value.length < 3) {
       username.lastElementChild.style.visibility='visible';

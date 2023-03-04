@@ -11,40 +11,41 @@
 <body>
   <div class="container">
     <div class="form-box">
-      <h1>sign up</h1>
+      <h1 id="title">sign up</h1>
       <form action="#">
         <div class="input-group">
           <div class="input-field">
             <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="username" />
+            <input id="username" type="text" placeholder="username" />
           </div>
 
-          <div class="input-field">
+          <div class="input-field" id="age">
             <i class="fa-solid fa-user"></i>
             <input type="date" placeholder=""/>
           </div>
 
-          <div class="input-field">
+          <div class="input-field" id="email">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" placeholder="email" />
           </div>
 
-          <div class="input-field">
+          <div class="input-field" id="password">
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="password" />
           </div>
 
-          <div class="input-field">
+          <div class="input-field" id="confirm">
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="confirmpassword" />
           </div>
-          <p>you have an account? <a href="#"> Sign in</a></p>
+          <p>you have an account? <a id="signin" href="#">Sign in</a></p>
         </div>
         <div class="btn-field">
-          <button type="submit" >sign up</button>
+          <button id="btn" type="submit" >sign up</button>
         </div>
       </form>
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>

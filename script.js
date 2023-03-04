@@ -11,9 +11,11 @@ signin.onclick=function(){
   if (signin.innerHTML==='sign in') {
     signin.innerHTML='sign up';
     title.innerHTML='sign in';
+    btn.innerHTML='sign in';
   }else{
     signin.innerHTML='sign in';
     title.innerHTML='sign up';
+    btn.innerHTML='sign up';
   }
   
 }

@@ -40,3 +40,7 @@ signin.onclick=function(){
     password.lastElementChild.style.visibility='hidden';
   }
 }
+//validation function
+btn.onclick=function(){
+  
+}

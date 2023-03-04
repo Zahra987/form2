@@ -61,6 +61,15 @@ btn.onclick=function(){
   }else{
     age.lastElementChild.style.visibility='hidden';
   }
+  //validation for email
+  var pattern = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+  var regexResult = pattern.test(email.children[1].value);
+  if (!regexResult) {
+    email.lastElementChild.style.visibility='visible';
+    return false;
+  }else{
+    email.lastElementChild.style.visibility='hidden';
+  }
   
   return true;
 }

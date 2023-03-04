@@ -54,8 +54,9 @@ input{
   margin-left: 15px;
   color:#999;
 }
-.input-group p{
+p{
   text-align: left;
+  margin-top: 22px;
 }
 a{
   text-decoration: none;
@@ -77,5 +78,44 @@ a{
 .btn-field button:hover{
   cursor: pointer;
   background-color: #5312bd;
+}
+.input-group{
+  position: relative;
+}
+.input-field div{
+  font-size: 0.8em;
+  color: red;
+  position: absolute;
+  left:85px;
+  top:40px;
+  background-color: #fff;
+  height: 27px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  visibility:visible;
+  max-width: 155px;
+}
+.input-field div::after{
+  content:'';
+  border:5px solid #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  top:-6px;
+  left:0;
+}
+#age div{
+  top:105px;
+}
+#email div{
+  top:165px;
+}
+#password div{
+  top:230px;
+}
+#confirm div{
+  top:290px;
 }
 

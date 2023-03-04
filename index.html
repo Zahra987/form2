@@ -14,29 +14,34 @@
       <h1 id="title">sign up</h1>
       <form action="#">
         <div class="input-group">
-          <div class="input-field">
+          <div class="input-field" id="username">
             <i class="fa-solid fa-user"></i>
-            <input id="username" type="text" placeholder="username" />
+            <input  type="text" placeholder="username" />
+            <div>at least 3 characters!</div>
           </div>
 
           <div class="input-field" id="age">
             <i class="fa-solid fa-user"></i>
             <input type="date" placeholder=""/>
+            <div>enter your age correctly!</div>
           </div>
 
           <div class="input-field" id="email">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="email" />
+            <input  type="text" placeholder="email" />
+            <div>The email entered is not valid!</div>
           </div>
 
           <div class="input-field" id="password">
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="password" />
+            <div>password must have at least 8 characters!</div>
           </div>
 
           <div class="input-field" id="confirm">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="confirmpassword" />
+            <input  type="password" placeholder="confirmpassword" />
+            <div>The entered passwords do not match!</div>
           </div>
           <p>you have an account? <a id="signin" href="#">Sign in</a></p>
         </div>

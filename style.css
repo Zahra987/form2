@@ -94,7 +94,7 @@ a{
   display: flex;
   align-items: center;
   border-radius: 3px;
-  visibility:visible;
+  visibility:hidden;
   max-width: 155px;
 }
 .input-field div::after{

@@ -42,6 +42,12 @@ signin.onclick=function(){
 }
 //validation function
 btn.onclick=function(){
+  //hidden all error when onclick on submit
+  username.lastElementChild.style.visibility='hidden';
+  age.lastElementChild.style.visibility='hidden';
+  email.lastElementChild.style.visibility='hidden';
+  password.lastElementChild.style.visibility='hidden';
+  confirm.lastElementChild.style.visibility='hidden';
   //...............................submit is sign up.................................
   if (btn.innerHTML==='sign up') {
     // change position of password error box

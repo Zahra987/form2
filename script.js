@@ -42,7 +42,9 @@ signin.onclick=function(){
 }
 //validation function
 btn.onclick=function(){
-  //validation for username
+  //...............................submit is sign up.................................
+  if (btn.innerHTML==='sign up') {
+    //validation for username
   if (username.children[1].value.length < 3) {
     username.lastElementChild.style.visibility='visible';
     return false;
@@ -85,4 +87,22 @@ btn.onclick=function(){
     confirm.lastElementChild.style.visibility='hidden';
   }
   return true;
+  //.........................submit is sign in..............................
+  }else{
+    //validation for username
+    if (username.children[1].value.length < 3) {
+      username.lastElementChild.style.visibility='visible';
+      return false;
+    }else{
+      username.lastElementChild.style.visibility='hidden';
+    }
+      //validation for password
+    if (password.children[1].value.length < 8) {
+      password.lastElementChild.style.visibility='visible';
+      return false;
+    }else{
+      password.lastElementChild.style.visibility='hidden';
+    }
+    return true;
+  }
 }

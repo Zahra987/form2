@@ -77,6 +77,12 @@ btn.onclick=function(){
   }else{
     password.lastElementChild.style.visibility='hidden';
   }
-  
+  //validation for confirm password
+  if (password.children[1].value != confirm.children[1].value) {
+    confirm.lastElementChild.style.visibility='visible';
+    return false;
+  }else{
+    confirm.lastElementChild.style.visibility='hidden';
+  }
   return true;
 }

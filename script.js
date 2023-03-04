@@ -70,6 +70,13 @@ btn.onclick=function(){
   }else{
     email.lastElementChild.style.visibility='hidden';
   }
+  //validation for password
+  if (password.children[1].value.length < 8) {
+    password.lastElementChild.style.visibility='visible';
+    return false;
+  }else{
+    password.lastElementChild.style.visibility='hidden';
+  }
   
   return true;
 }

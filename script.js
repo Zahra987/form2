@@ -17,6 +17,12 @@ signin.onclick=function(){
     age.style.maxHeight='0';
     email.style.maxHeight='0';
     confirm.style.maxHeight='0';
+    //hidden all errors 
+    username.lastElementChild.style.visibility='hidden';
+    age.lastElementChild.style.visibility='hidden';
+    email.lastElementChild.style.visibility='hidden';
+    confirm.lastElementChild.style.visibility='hidden';
+    password.lastElementChild.style.visibility='hidden';
   }else{
     signin.innerHTML='sign in';
     title.innerHTML='sign up';
@@ -26,6 +32,11 @@ signin.onclick=function(){
     age.style.maxHeight='60px';
     email.style.maxHeight='60px';
     confirm.style.maxHeight='60px';
+    //hidden all errors 
+    username.lastElementChild.style.visibility='hidden';
+    age.lastElementChild.style.visibility='hidden';
+    email.lastElementChild.style.visibility='hidden';
+    confirm.lastElementChild.style.visibility='hidden';
+    password.lastElementChild.style.visibility='hidden';
   }
-  
 }

@@ -5,7 +5,7 @@ var username= document.getElementById('username');
 var age= document.getElementById('age');
 var email= document.getElementById('email');
 var password= document.getElementById('password');
-var confirm= document.getElementById('confirm');
+var confirmpass= document.getElementById('confirmpass');
 
 signin.onclick=function(){
   if (signin.innerHTML==='sign in') {
@@ -16,12 +16,12 @@ signin.onclick=function(){
     //hidden age and email and confirm field
     age.style.maxHeight='0';
     email.style.maxHeight='0';
-    confirm.style.maxHeight='0';
+    confirmpass.style.maxHeight='0';
     //hidden all errors 
     username.lastElementChild.style.visibility='hidden';
     age.lastElementChild.style.visibility='hidden';
     email.lastElementChild.style.visibility='hidden';
-    confirm.lastElementChild.style.visibility='hidden';
+    confirmpass.lastElementChild.style.visibility='hidden';
     password.lastElementChild.style.visibility='hidden';
   }else{
     signin.innerHTML='sign in';
@@ -31,12 +31,12 @@ signin.onclick=function(){
     //visible age and email and confirm field
     age.style.maxHeight='60px';
     email.style.maxHeight='60px';
-    confirm.style.maxHeight='60px';
+    confirmpass.style.maxHeight='60px';
     //hidden all errors 
     username.lastElementChild.style.visibility='hidden';
     age.lastElementChild.style.visibility='hidden';
     email.lastElementChild.style.visibility='hidden';
-    confirm.lastElementChild.style.visibility='hidden';
+    confirmpass.lastElementChild.style.visibility='hidden';
     password.lastElementChild.style.visibility='hidden';
   }
 }
@@ -47,7 +47,7 @@ btn.onclick=function(){
   age.lastElementChild.style.visibility='hidden';
   email.lastElementChild.style.visibility='hidden';
   password.lastElementChild.style.visibility='hidden';
-  confirm.lastElementChild.style.visibility='hidden';
+  confirmpass.lastElementChild.style.visibility='hidden';
   //...............................submit is sign up.................................
   if (btn.innerHTML==='sign up') {
     // change position of password error box
@@ -88,11 +88,11 @@ btn.onclick=function(){
     password.lastElementChild.style.visibility='hidden';
   }
   //validation for confirm password
-  if (password.children[1].value != confirm.children[1].value) {
-    confirm.lastElementChild.style.visibility='visible';
+  if (password.children[1].value != confirmpass.children[1].value) {
+    confirmpass.lastElementChild.style.visibility='visible';
     return false;
   }else{
-    confirm.lastElementChild.style.visibility='hidden';
+    confirmpass.lastElementChild.style.visibility='hidden';
   }
   return true;
   //.........................submit is sign in..............................

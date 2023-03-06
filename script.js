@@ -49,8 +49,6 @@ function myFormValidation(){
   if (document.forms['myForm']['fusername'].value.length < 3) {
     username.lastElementChild.style.visibility='visible';
     return false;
-  }else{
-    username.lastElementChild.style.visibility='hidden';
   }
   //validation for age
   var dateString = document.forms['myForm']['fage'].value;
@@ -61,8 +59,6 @@ function myFormValidation(){
   if (ageResult < 18) {
     age.lastElementChild.style.visibility='visible';
     return false;
-  }else{
-    age.lastElementChild.style.visibility='hidden';
   }
   //validation for email
   var pattern = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
@@ -70,24 +66,17 @@ function myFormValidation(){
   if (!regexResult) {
     email.lastElementChild.style.visibility='visible';
     return false;
-  }else{
-    email.lastElementChild.style.visibility='hidden';
   }
   //validation for password
   if (document.forms['myForm']['fpassword'].value.length < 8) {
     password.lastElementChild.style.visibility='visible';
     return false;
-  }else{
-    password.lastElementChild.style.visibility='hidden';
   }
   //validation for confirm password
   if (document.forms['myForm']['fpassword'].value != document.forms['myForm']['fconfirmpass'].value) {
     confirmpass.lastElementChild.style.visibility='visible';
     return false;
-  }else{
-    confirmpass.lastElementChild.style.visibility='hidden';
   }
-  return true;
   //.........................submit is sign in..............................
   }else{
     // change position of password error box
@@ -96,16 +85,12 @@ function myFormValidation(){
     if (document.forms['myForm']['fusername'].value.length < 3) {
       username.lastElementChild.style.visibility='visible';
       return false;
-    }else{
-      username.lastElementChild.style.visibility='hidden';
     }
       //validation for password
     if (document.forms['myForm']['fpassword'].value.length < 8) {
       password.lastElementChild.style.visibility='visible';
       return false;
-    }else{
-      password.lastElementChild.style.visibility='hidden';
     }
-    return true;
   }
+  return true;
 }

@@ -38,14 +38,20 @@ signin.onclick=function(){
     hiddenAllOfErr();
   }
 }
-//validation function
+
 function myFormValidation(){
   hiddenAllOfErr();
-  //...............................submit is sign up.................................
   if (btn.innerHTML==='sign up') {
-    // change position of password error box
-    password.lastElementChild.style.top='230px';
-    //validation for username
+    return signupFormValidation();
+  }else{
+    return signinFormValidation();
+  }
+}
+
+
+function signupFormValidation() {
+  password.lastElementChild.style.top='230px';
+  //validation for username
   if (document.forms['myForm']['fusername'].value.length < 3) {
     username.lastElementChild.style.visibility='visible';
     return false;
@@ -77,20 +83,20 @@ function myFormValidation(){
     confirmpass.lastElementChild.style.visibility='visible';
     return false;
   }
-  //.........................submit is sign in..............................
-  }else{
-    // change position of password error box
-    password.lastElementChild.style.top='120px';
-    //validation for username
-    if (document.forms['myForm']['fusername'].value.length < 3) {
-      username.lastElementChild.style.visibility='visible';
-      return false;
-    }
-      //validation for password
-    if (document.forms['myForm']['fpassword'].value.length < 8) {
-      password.lastElementChild.style.visibility='visible';
-      return false;
-    }
-  }
   return true;
+}
+
+function signinFormValidation() {
+   password.lastElementChild.style.top='120px';
+   //validation for username
+   if (document.forms['myForm']['fusername'].value.length < 3) {
+     username.lastElementChild.style.visibility='visible';
+     return false;
+   }
+     //validation for password
+   if (document.forms['myForm']['fpassword'].value.length < 8) {
+     password.lastElementChild.style.visibility='visible';
+     return false;
+   }
+   return true;
 }

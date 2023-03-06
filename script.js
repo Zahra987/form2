@@ -7,6 +7,14 @@ var email= document.getElementById('email');
 var password= document.getElementById('password');
 var confirmpass= document.getElementById('confirmpass');
 
+function hiddenAllOfErr() {
+  username.lastElementChild.style.visibility='hidden';
+  age.lastElementChild.style.visibility='hidden';
+  email.lastElementChild.style.visibility='hidden';
+  confirmpass.lastElementChild.style.visibility='hidden';
+  password.lastElementChild.style.visibility='hidden';
+}
+
 signin.onclick=function(){
   if (signin.innerHTML==='sign in') {
     signin.innerHTML='sign up';
@@ -17,12 +25,7 @@ signin.onclick=function(){
     age.style.maxHeight='0';
     email.style.maxHeight='0';
     confirmpass.style.maxHeight='0';
-    //hidden all errors 
-    username.lastElementChild.style.visibility='hidden';
-    age.lastElementChild.style.visibility='hidden';
-    email.lastElementChild.style.visibility='hidden';
-    confirmpass.lastElementChild.style.visibility='hidden';
-    password.lastElementChild.style.visibility='hidden';
+    hiddenAllOfErr();
   }else{
     signin.innerHTML='sign in';
     title.innerHTML='sign up';
@@ -32,22 +35,12 @@ signin.onclick=function(){
     age.style.maxHeight='60px';
     email.style.maxHeight='60px';
     confirmpass.style.maxHeight='60px';
-    //hidden all errors 
-    username.lastElementChild.style.visibility='hidden';
-    age.lastElementChild.style.visibility='hidden';
-    email.lastElementChild.style.visibility='hidden';
-    confirmpass.lastElementChild.style.visibility='hidden';
-    password.lastElementChild.style.visibility='hidden';
+    hiddenAllOfErr();
   }
 }
 //validation function
 function myFormValidation(){
-  //hidden all error when onclick on submit
-  username.lastElementChild.style.visibility='hidden';
-  age.lastElementChild.style.visibility='hidden';
-  email.lastElementChild.style.visibility='hidden';
-  password.lastElementChild.style.visibility='hidden';
-  confirmpass.lastElementChild.style.visibility='hidden';
+  hiddenAllOfErr();
   //...............................submit is sign up.................................
   if (btn.innerHTML==='sign up') {
     // change position of password error box

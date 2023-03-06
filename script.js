@@ -41,7 +41,7 @@ signin.onclick=function(){
   }
 }
 //validation function
-btn.onclick=function(){
+function myFormValidation(){
   //hidden all error when onclick on submit
   username.lastElementChild.style.visibility='hidden';
   age.lastElementChild.style.visibility='hidden';

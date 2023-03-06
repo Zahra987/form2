@@ -52,7 +52,7 @@ function myFormValidation(){
 function signupFormValidation() {
   password.lastElementChild.style.top='230px';
   //validation for username
-  if (document.forms['myForm']['fusername'].value.length < 3) {
+  if (document.forms['myForm']['fusername'].value.length < 4) {
     username.lastElementChild.style.visibility='visible';
     return false;
   }
@@ -72,7 +72,7 @@ function signupFormValidation() {
     return false;
   }
   //validation for password
-  if (document.forms['myForm']['fpassword'].value.length < 8) {
+  if (document.forms['myForm']['fpassword'].value.length < 7) {
     password.lastElementChild.style.visibility='visible';
     return false;
   }
@@ -87,12 +87,12 @@ function signupFormValidation() {
 function signinFormValidation() {
    password.lastElementChild.style.top='120px';
    //validation for username
-   if (document.forms['myForm']['fusername'].value.length < 3) {
+   if (document.forms['myForm']['fusername'].value.length < 4) {
      username.lastElementChild.style.visibility='visible';
      return false;
    }
      //validation for password
-   if (document.forms['myForm']['fpassword'].value.length < 8) {
+   if (document.forms['myForm']['fpassword'].value.length < 7) {
      password.lastElementChild.style.visibility='visible';
      return false;
    }

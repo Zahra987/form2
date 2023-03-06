@@ -53,14 +53,14 @@ btn.onclick=function(){
     // change position of password error box
     password.lastElementChild.style.top='230px';
     //validation for username
-  if (username.children[1].value.length < 3) {
+  if (document.forms['myForm']['fusername'].value.length < 3) {
     username.lastElementChild.style.visibility='visible';
     return false;
   }else{
     username.lastElementChild.style.visibility='hidden';
   }
   //validation for age
-  var dateString = age.children[1].value;
+  var dateString = document.forms['myForm']['fage'].value;
   var parts = dateString.split("-");
   var now = new Date();
   var birthday = new Date(now.getFullYear(),parts[1]-1,parts[2]);
@@ -73,7 +73,7 @@ btn.onclick=function(){
   }
   //validation for email
   var pattern = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
-  var regexResult = pattern.test(email.children[1].value);
+  var regexResult = pattern.test(document.forms['myForm']['femail'].value);
   if (!regexResult) {
     email.lastElementChild.style.visibility='visible';
     return false;
@@ -81,14 +81,14 @@ btn.onclick=function(){
     email.lastElementChild.style.visibility='hidden';
   }
   //validation for password
-  if (password.children[1].value.length < 8) {
+  if (document.forms['myForm']['fpassword'].value.length < 8) {
     password.lastElementChild.style.visibility='visible';
     return false;
   }else{
     password.lastElementChild.style.visibility='hidden';
   }
   //validation for confirm password
-  if (password.children[1].value != confirmpass.children[1].value) {
+  if (document.forms['myForm']['fpassword'].value != document.forms['myForm']['fconfirmpass'].value) {
     confirmpass.lastElementChild.style.visibility='visible';
     return false;
   }else{
@@ -100,14 +100,14 @@ btn.onclick=function(){
     // change position of password error box
     password.lastElementChild.style.top='120px';
     //validation for username
-    if (username.children[1].value.length < 3) {
+    if (document.forms['myForm']['fusername'].value.length < 3) {
       username.lastElementChild.style.visibility='visible';
       return false;
     }else{
       username.lastElementChild.style.visibility='hidden';
     }
       //validation for password
-    if (password.children[1].value.length < 8) {
+    if (document.forms['myForm']['fpassword'].value.length < 8) {
       password.lastElementChild.style.visibility='visible';
       return false;
     }else{

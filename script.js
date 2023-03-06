@@ -63,6 +63,10 @@ function signupFormValidation() {
   }
   //validation for email
   var emailValue= document.forms['myForm']['femail'].value;
+  if (emailValue.indexOf("@") <= 0) {
+    email.lastElementChild.style.visibility='visible';
+    return false;
+  }
   if (emailValue.charAt(emailValue.length - 4) != '.' && emailValue.charAt(emailValue.length - 3) != '.' ) {
     email.lastElementChild.style.visibility='visible';
     return false;

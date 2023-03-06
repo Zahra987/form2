@@ -57,12 +57,7 @@ function signupFormValidation() {
     return false;
   }
   //validation for age
-  var dateString = document.forms['myForm']['fage'].value;
-  var parts = dateString.split("-");
-  var now = new Date();
-  var birthday = new Date(now.getFullYear(),parts[1]-1,parts[2]);
-  var ageResult = now.getFullYear()-parts[0];
-  if (ageResult < 18) {
+  if (document.forms['myForm']['fage'].value < 1 || isNaN(document.forms['myForm']['fage'].value) ) {
     age.lastElementChild.style.visibility='visible';
     return false;
   }

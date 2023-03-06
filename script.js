@@ -62,9 +62,8 @@ function signupFormValidation() {
     return false;
   }
   //validation for email
-  var pattern = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
-  var regexResult = pattern.test(document.forms['myForm']['femail'].value);
-  if (!regexResult) {
+  var emailValue= document.forms['myForm']['femail'].value;
+  if (emailValue.charAt(emailValue.length - 4) != '.' && emailValue.charAt(emailValue.length - 3) != '.' ) {
     email.lastElementChild.style.visibility='visible';
     return false;
   }

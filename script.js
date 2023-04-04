@@ -54,31 +54,28 @@ function signupFormValidation() {
   //validation for username
   if (document.forms['myForm']['fusername'].value.length < 4) {
     username.lastElementChild.style.visibility='visible';
-    return false;
   }
   //validation for age
   if (document.forms['myForm']['fage'].value < 1 || isNaN(document.forms['myForm']['fage'].value) ) {
     age.lastElementChild.style.visibility='visible';
-    return false;
   }
   //validation for email
   var emailValue= document.forms['myForm']['femail'].value;
   if (emailValue.indexOf("@") <= 0) {
     email.lastElementChild.style.visibility='visible';
-    return false;
   }
   if (emailValue.charAt(emailValue.length - 4) != '.' && emailValue.charAt(emailValue.length - 3) != '.' ) {
     email.lastElementChild.style.visibility='visible';
-    return false;
   }
   //validation for password
   if (document.forms['myForm']['fpassword'].value.length < 7) {
     password.lastElementChild.style.visibility='visible';
-    return false;
   }
   //validation for confirm password
   if (document.forms['myForm']['fpassword'].value != document.forms['myForm']['fconfirmpass'].value) {
     confirmpass.lastElementChild.style.visibility='visible';
+  }
+  if (username.lastElementChild.style.visibility === 'visible' || age.lastElementChild.style.visibility === 'visible' || email.lastElementChild.style.visibility === 'visible' || password.lastElementChild.style.visibility === 'visible' || confirmpass.lastElementChild.style.visibility === 'visible' ) {
     return false;
   }
   return true;
@@ -89,12 +86,13 @@ function signinFormValidation() {
    //validation for username
    if (document.forms['myForm']['fusername'].value.length < 4) {
      username.lastElementChild.style.visibility='visible';
-     return false;
    }
      //validation for password
    if (document.forms['myForm']['fpassword'].value.length < 7) {
      password.lastElementChild.style.visibility='visible';
-     return false;
    }
+   if (username.lastElementChild.style.visibility === 'visible' || password.lastElementChild.style.visibility === 'visible' ) {
+    return false;
+  }
    return true;
 }

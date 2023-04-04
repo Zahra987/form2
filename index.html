@@ -6,39 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form</title>
   <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="#" />
   <script src="https://kit.fontawesome.com/bc855ab72d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
     <div class="form-box">
       <h1 id="title">sign up</h1>
-      <form action="#">
+      <form action="#" name="myForm" onsubmit="return myFormValidation()" novalidate>
         <div class="input-group">
-          <div class="input-field">
+          <div class="input-field" id="username">
             <i class="fa-solid fa-user"></i>
-            <input id="username" type="text" placeholder="username" />
+            <input  type="text" name="fusername" placeholder="username" />
+            <div>at least 3 characters!</div>
           </div>
 
           <div class="input-field" id="age">
             <i class="fa-solid fa-user"></i>
-            <input type="date" placeholder=""/>
+            <input type="text" name="fage" placeholder="age"/>
+            <div>enter your age correctly!</div>
           </div>
 
           <div class="input-field" id="email">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="email" />
+            <input  type="text" name="femail" placeholder="someone@gmail.com" />
+            <div>The email entered is not valid!</div>
           </div>
 
           <div class="input-field" id="password">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="password" />
+            <input type="password" name="fpassword" placeholder="password" />
+            <div>password must have at least 8 characters!</div>
           </div>
 
-          <div class="input-field" id="confirm">
+          <div class="input-field" id="confirmpass">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="confirmpassword" />
+            <input  type="password" name="fconfirmpass" placeholder="confirmpassword" />
+            <div>The entered passwords do not match!</div>
           </div>
-          <p>you have an account? <a id="signin" href="#">Sign in</a></p>
+          <p>you have an account? <a id="signin" href="#">sign in</a></p>
         </div>
         <div class="btn-field">
           <button id="btn" type="submit" >sign up</button>

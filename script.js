@@ -1,11 +1,11 @@
-var title= document.getElementById('title');
-var signin= document.getElementById('signin');
-var btn= document.getElementById('btn');
-var username= document.getElementById('username');
-var age= document.getElementById('age');
-var email= document.getElementById('email');
-var password= document.getElementById('password');
-var confirmpass= document.getElementById('confirmpass');
+const title= document.getElementById('title');
+const signin= document.getElementById('signin');
+const btn= document.getElementById('btn');
+const username= document.getElementById('username');
+const age= document.getElementById('age');
+const email= document.getElementById('email');
+const password= document.getElementById('password');
+const confirmpass= document.getElementById('confirmpass');
 
 function hiddenAllOfErr() {
   username.lastElementChild.style.visibility='hidden';
